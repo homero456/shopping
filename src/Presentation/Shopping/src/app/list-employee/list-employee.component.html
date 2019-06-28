@@ -1,0 +1,27 @@
+<div class="col-md-3"></div>
+
+<div align="center">
+  
+  <table>
+    <tr>
+      <td style="text-align: left">
+          <button class="btn btn-danger" (click)="addUser()"> Add User</button>
+      </td>
+    </tr>
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Telephone</td>
+      <td>Delete</td>
+      <td>Edit</td>
+    </tr>
+    <tr *ngFor="let e of listEmployees">
+      <td>{{e.id}}</td>
+      <td>{{e.name}}</td>
+      <td>{{e.telephone}}</td>
+      <td><button class="btn btn-danger" (click)="deleteUser(e)"> Delete</button>
+        <button class="btn btn-danger" (click)="editUser(e)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+  </table>
+</div>
+<div class="col-md-3"></div>
